@@ -21,12 +21,12 @@ public class FileDao {
 			stat.setBytes(2, file.getContent());
 			stat.execute();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 	
-	//这只是一个测是方法,其中的id都是写死的,文件保存路径也是写死的
+	
+	//this just is a test method, it's not used in this project
 	public void downLoad() {
 		Connection conn = DBUtil.getConnection();
 		String sql = "select content from imooc_threads_file where 1=1 "

@@ -10,7 +10,7 @@ import com.imooc.emtity.User;
 import com.imooc.util.DBUtil;
 
 /**
- * 提供与用户表操作相关的方法
+ * Provides methods related to user table operations
  */
 public class UseDao {
 	public void addUser (User user) {
@@ -28,6 +28,7 @@ public class UseDao {
 			e.printStackTrace();
 		}
 	}
+	
 	
 	public boolean login (User user) {
 		Connection conn = DBUtil.getConnection();

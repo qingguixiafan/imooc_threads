@@ -11,10 +11,15 @@ import com.imooc.dao.UseDao;
 import com.imooc.emtity.File;
 import com.imooc.emtity.User;
 
-public class clientSocket {
+public class clientSocket extends Thread {
 	public static boolean isLogin = false;
 	public static Scanner console = new Scanner(System.in);
 	public static void main(String[] args) {
+		clientSocket socket = new clientSocket();
+		socket.start();
+	}
+	
+	public void run() {
 		System.out.println("=========welcome to file cloud platform=========");
 		System.out.println("we will provid the follow functions,please input suited ID");
 		System.out.println("1: new user register");
@@ -101,6 +106,7 @@ public class clientSocket {
 		}
 		return emtityFile;
 	}
+	
 	
 	public void creCliSocket(String file_name, byte[] bytes) throws Exception {  
         File  file = new File();

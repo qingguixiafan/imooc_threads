@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 /**
- * 提供与数据库链接的connection
+ * provide connection object, it's a connection to database
  */
 public class DBUtil {
 
@@ -16,9 +16,9 @@ public class DBUtil {
 	
 	static {
 		try {
-			// 1加载驱动程序
+			// 1 load driver program
 			Class.forName("com.mysql.jdbc.Driver");
-			// 2获得数据库连接
+			// 2 get database connection
 			con = DriverManager.getConnection(url, user, password);
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
